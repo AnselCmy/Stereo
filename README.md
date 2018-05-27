@@ -56,4 +56,4 @@ make
 
 Here is the result
 
-![rectify02](/Users/chen/Desktop/stereo/Stereo/img/rectify/rectify02.jpg)
+![rectify02](./img/rectify/rectify02.jpg)
