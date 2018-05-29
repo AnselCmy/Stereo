@@ -21,7 +21,7 @@ void StereoRectification()
     string picList[] = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "11", "12", "13", "14"};
     string baseLeftPath = "../../img/left/left";
     string baseRightPath = "../../img/right/right";
-    string rectifyPicNum = "02";
+    string rectifyPicNum = "11";
     Size imageSize;
 
     vector<cv::Point2f> corners[2];
@@ -94,8 +94,10 @@ void StereoRectification()
     if(access("../../img/rectify", F_OK))
         mkdir("../../img/rectify", S_IRWXU);
     imwrite("../../img/rectify/rectify" + rectifyPicNum + ".jpg", pair);
-    imshow("rectified", pair);
-    while(waitKey() != 'q');
+    imwrite("../../img/rectify/left" + rectifyPicNum + ".jpg", img1r);
+    imwrite("../../img/rectify/right" + rectifyPicNum + ".jpg", img2r);
+//    imshow("rectified", pair);
+//    while(waitKey() != 'q');
 }
 
 #endif //CODE_STEREORECTIFICATION_H

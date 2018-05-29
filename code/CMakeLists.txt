@@ -5,6 +5,6 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(code main.cpp StereoRectification.h)
+add_executable(code main.cpp StereoRectification.h SGBM.h)
 find_package(OpenCV REQUIRED)
 target_link_libraries(code ${OpenCV_LIBS})
